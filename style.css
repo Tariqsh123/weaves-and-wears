@@ -1,0 +1,192 @@
+.navbar-custom {
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    height: 90px;
+}
+.navbar-brand {
+    margin: 0;
+}
+#logo {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+.hero {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://images.pexels.com/photos/16170/pexels-photo.jpg?cs=srgb&dl=pexels-romanp-16170.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.55);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+.hero h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #fff;
+    text-shadow: 0 0 8px #fff, 0 0 3px #fff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    white-space: pre-wrap;
+}
+.hero h1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 0.6s forwards;
+}
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.hero p {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #ddd;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+}
+@media (max-width: 768px) {
+    .navbar-custom { height: 70px; }
+    #logo { height: 50px; }
+}
+
+/* Why Choose Us */
+#Why-choose-us-heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #222;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.feature-card {
+    background: linear-gradient(gainsboro,white,gainsboro);
+    border: 1px solid gainsboro;
+    border-radius: 12px;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(-50px);
+    cursor: default;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    border-color: #bbb;
+}
+
+.icon i {
+    color: #333;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.feature-card:hover .icon i {
+    transform: scale(1.3);
+    color: #16c9bd; 
+}
+.feature-card h5 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+.animate-card.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-out;
+}
+
+.animate-card:nth-child(1) { transition-delay: 0.1s; }
+.animate-card:nth-child(2) { transition-delay: 0.2s; }
+.animate-card:nth-child(3) { transition-delay: 0.3s; }
+.animate-card:nth-child(4) { transition-delay: 0.4s; }
+@media (max-width: 992px) {
+    .feature-card { padding: 25px 15px; }
+}
+@media (max-width: 576px) {
+    #Why-choose-us-heading { font-size: 30px; margin-bottom: 2rem; }
+    .feature-card p { font-size: 0.9rem; }
+}
+/* Product Section */
+#product-heading-main{
+    font-family:'Oswald',sans-serif; 
+    font-weight:700;
+    font-size: 50px;
+}
+.product-card {
+  background: #fff;
+  box-shadow: 1px 1px 10px grey !important;
+  border-radius: 15px;
+  /* border: 1px solid red; */
+  transition: all 0.4s ease;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+}
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.product-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-img {
+  transform: scale(1.1);
+}
+.btn.see-details-btn {
+  background-color: #16c9bd;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn.see-details-btn:hover {
+  background-color: #0ea79b;
+  color: #fff;
+}
+.buy-now-btn {
+  background-color: #16c9bd;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+.buy-now-btn:hover {
+    color: white;
+  background-color: #0ea79b;
+}
+@media (max-width: 576px){
+    #product-heading-main {
+    font-size: 30px;
+}
+}
+
+/* Footer */
