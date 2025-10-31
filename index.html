@@ -677,11 +677,13 @@ newArrival_renderCards();
 <!-- Why Choose Us Section -->
 <section class="py-5 bg-light">
   <div class="container">
-    <h2 id="Why-choose-us-heading">Why Choose Us</h2>
-    <div class="row g-4">
+    <h2 id="Why-choose-us-heading" class="mb-4 text-center">Why Choose Us</h2>
+    
+    <!-- ✅ Bootstrap row-cols classes handle responsive layout -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
       
       <!-- Feature 1 -->
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col">
         <div class="feature-card animate-card text-center p-4 h-100">
           <div class="icon mb-3">
             <i class="fas fa-star fs-2"></i>
@@ -692,7 +694,7 @@ newArrival_renderCards();
       </div>
 
       <!-- Feature 2 -->
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col">
         <div class="feature-card animate-card text-center p-4 h-100">
           <div class="icon mb-3">
             <i class="fas fa-clock fs-2"></i>
@@ -703,7 +705,7 @@ newArrival_renderCards();
       </div>
 
       <!-- Feature 3 -->
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col">
         <div class="feature-card animate-card text-center p-4 h-100">
           <div class="icon mb-3">
             <i class="fas fa-shipping-fast fs-2"></i>
@@ -714,7 +716,7 @@ newArrival_renderCards();
       </div>
 
       <!-- Feature 4 -->
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col">
         <div class="feature-card animate-card text-center p-4 h-100">
           <div class="icon mb-3">
             <i class="fas fa-undo fs-2"></i>
@@ -727,6 +729,7 @@ newArrival_renderCards();
     </div>
   </div>
 </section>
+
 
 <script>
 const cards = document.querySelectorAll('.animate-card');
