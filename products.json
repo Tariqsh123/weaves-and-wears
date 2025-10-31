@@ -1,5 +1,6 @@
 [
   {
+    "id": "P001",
     "name": "Classic Leather Jacket",
     "price": "12,500",
     "image": "https://www.acecart.pk/cdn/shop/files/8-1_b215a744-2201-4f3a-ad3b-78b7faeedfa2.jpg?v=1713611297",
@@ -8,6 +9,7 @@
     "category": "Jackets"
   },
   {
+    "id": "P002",
     "name": "Denim Casual Jacket",
     "price": "9,800",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPP2rZF5qIA6toEwVbiNw6AymogWpO8ZO0ag&s",
@@ -16,6 +18,7 @@
     "category": "Winter Collection"
   },
   {
+    "id": "P003",
     "name": "Bomber Leather Jacket",
     "price": "11,200",
     "image": "https://m.media-amazon.com/images/I/71UYiUZ+JxL._AC_UY1000_.jpg",
@@ -24,6 +27,7 @@
     "category": "Jackets"
   },
   {
+    "id": "P004",
     "name": "Hooded Casual Jacket",
     "price": "10,500",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqweUwvrPPQEJCxwz-FDJLksFKnkI4EIsBmQ&s",
@@ -32,6 +36,7 @@
     "category": "Winter Collection"
   },
   {
+    "id": "P005",
     "name": "Winter Parka Jacket",
     "price": "14,000",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4XtYxJGSQXc_uDNsodNPXWA3Xly5LH59aWA&s",
@@ -40,6 +45,7 @@
     "category": "Winter Collection"
   },
   {
+    "id": "P006",
     "name": "Premium Leather Jacket",
     "price": "13,500",
     "image": "https://img.freepik.com/free-photo/still-life-rendering-jackets-display_23-2149745027.jpg",
@@ -48,6 +54,7 @@
     "category": "Jackets"
   },
   {
+    "id": "P007",
     "name": "Men's Coat",
     "price": "15,000",
     "image": "https://media.istockphoto.com/id/163208487/photo/male-coat-isolated-on-the-white.jpg?s=612x612&w=0&k=20&c=3Sdq5xnVS2jOYPNXI6JLwAumzyelcP_VgKVW0MVUhwo=",
@@ -56,14 +63,16 @@
     "category": "Winter Collection"
   },
   {
+    "id": "P008",
     "name": "Black Hooded Bomber",
     "price": "12,800",
     "image": "https://www.angeljackets.com/eu/product_images/c/719/bomber_black_leather_hooded_jacket__84293_zoom.webp",
     "desc": "Trendy black leather hooded bomber jacket for casual wear.",
-    "color": ["Black","Green","Red"],
+    "color": ["Black", "Green", "Red"],
     "category": "Jackets"
   },
   {
+    "id": "P009",
     "name": "Classic Brown Jacket",
     "price": "11,900",
     "image": "https://m.media-amazon.com/images/I/71UrJnUntxL._AC_SL1500_.jpg",
@@ -72,6 +81,7 @@
     "category": "Winter Collection"
   },
   {
+    "id": "P010",
     "name": "Stylish Grey Jacket",
     "price": "10,700",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScqF2qOJN6hJ9CxXkm-BeXEU5BDa08ID2922Ljy5j0KZGEeWc3tQU0krCRxshtd6ep4MA&usqp=CAU",
@@ -80,6 +90,7 @@
     "category": "Jackets"
   },
   {
+    "id": "P011",
     "name": "Casual Blue Jacket",
     "price": "9,900",
     "image": "https://m.media-amazon.com/images/I/51Z-ZmEHn-L._AC_SX466_.jpg",
@@ -88,6 +99,7 @@
     "category": "Winter Collection"
   },
   {
+    "id": "P012",
     "name": "Trendy Black Jacket",
     "price": "12,300",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbL66Ztg86JmyFkXWwHo4vKzdZm4yRLVEyYAIgy_f2vN6mLkHdUPqg26CSEYFdjshY3NY&usqp=CAU",

@@ -39,7 +39,7 @@ h2::after {
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #0a1f44, #d4af37);
+  background: linear-gradient(90deg,  #d4af37, #d4af37);
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -118,8 +118,6 @@ input:focus, textarea:focus, select:focus {
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.1);
 }
-
-/* 🎨 Color Preview Circles */
 .color-preview {
   display: flex;
   gap: 5px;
@@ -157,11 +155,15 @@ input:focus, textarea:focus, select:focus {
 <div class="container py-5">
   <h2 class="text-center mb-5">Product Management Dashboard</h2>
 
-  <!-- Add Product Form -->
   <div class="card p-4 mb-5">
     <h5 class="fw-bold mb-3">➕ Add New Product</h5>
     <form id="productForm">
       <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Product ID</label>
+          <input type="text" id="productId" class="form-control" placeholder="e.g. P1001" required>
+        </div>
+
         <div class="col-md-6">
           <label class="form-label">Product Name</label>
           <input type="text" id="productName" class="form-control" placeholder="e.g. Classic Jacket" required>
@@ -215,6 +217,7 @@ input:focus, textarea:focus, select:focus {
       <table class="table table-bordered align-middle mb-0">
         <thead>
           <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Price</th>
             <th>Colors</th>
@@ -231,8 +234,6 @@ input:focus, textarea:focus, select:focus {
 
 <script>
 let products = [];
-
-// Load existing products
 fetch('products.json')
   .then(res => res.json())
   .then(data => {
@@ -252,7 +253,6 @@ fetch('products.json')
     }
   });
 
-// 🎨 Live Color Preview
 document.getElementById('productColor').addEventListener('input', () => {
   const previewBox = document.getElementById('colorPreviewBox');
   previewBox.innerHTML = '';
@@ -265,7 +265,6 @@ document.getElementById('productColor').addEventListener('input', () => {
   });
 });
 
-// Render Table
 function renderProducts(){
   const tbody = document.getElementById('productTableBody');
   tbody.innerHTML = '';
@@ -275,6 +274,7 @@ function renderProducts(){
       : (p.color ? p.color : '-');
     tbody.innerHTML += `
       <tr>
+        <td>${p.id || '-'}</td>
         <td>${p.name}</td>
         <td>PKR ${p.price}</td>
         <td><div class="color-preview">${colorHTML}</div></td>
@@ -284,12 +284,11 @@ function renderProducts(){
       </tr>`;
   });
 }
-
-// Add Product
 document.getElementById('productForm').addEventListener('submit', e => {
   e.preventDefault();
   const colorList = document.getElementById('productColor').value.split(',').map(c => c.trim()).filter(c => c);
   const product = {
+    id: productId.value,
     name: productName.value,
     price: productPrice.value,
     image: productImage.value,
@@ -303,8 +302,6 @@ document.getElementById('productForm').addEventListener('submit', e => {
   e.target.reset();
   document.getElementById('colorPreviewBox').innerHTML = '';
 });
-
-// Delete Product
 function deleteProduct(i){
   if(confirm("Are you sure you want to delete this product?")){
     products.splice(i,1);
@@ -313,7 +310,6 @@ function deleteProduct(i){
   }
 }
 
-// Download JSON
 document.getElementById('downloadJson').addEventListener('click', ()=>{
   const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(products, null, 2));
   const a = document.createElement('a');
@@ -322,7 +318,7 @@ document.getElementById('downloadJson').addEventListener('click', ()=>{
   document.body.appendChild(a);
   a.click();
   a.remove();
-  alert("✅ Download complete with color support!");
+  alert("✅ Download complete with color and ID support!");
 });
 </script>
 

@@ -1,31 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Refined Jackets & Modern Apparel</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html lang="en">
+  <title>Refined Jackets & Modern Apparel | MH Collections</title>
+  <link rel="canonical" href="https://tariqsh123.github.io/weaves-and-wears/">
+  <meta name="description" content="Explore MH Collections for refined jackets and modern apparel that redefine everyday style. Shop quality, comfort, and timeless craftsmanship for men and women.">
+  <meta name="keywords" content="jackets, modern apparel, men's fashion, women's fashion, MH Collections, outerwear, coats, clothing store, fashion trends, online boutique">
+  <meta name="author" content="MH Collections">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="icon" href="images/logo.webp" type="image/x-icon">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Refined Jackets & Modern Apparel | MH Collections">
+  <meta property="og:description" content="Explore MH Collections for refined jackets and modern apparel that redefine everyday style.">
+  <meta property="og:url" content="https://tariqsh123.github.io/weaves-and-wears/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MH Collections">
+  <meta property="og:image" content="images/logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refined Jackets & Modern Apparel | MH Collections">
+  <meta name="twitter:description" content="Explore MH Collections for refined jackets and modern apparel that redefine everyday style.">
+  <meta name="twitter:image" content="images/logo.webp">
+  <meta name="twitter:site" content="@mhcollections">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MH Collections",
+    "url": "https://tariqsh123.github.io/weaves-and-wears/",
+    "logo": "https://tariqsh123.github.io/weaves-and-wears/images/logo.webp",
+    "description": "Refined jackets and modern apparel for men and women. Discover comfort, quality, and timeless style with MH Collections.",
+    "sameAs": [
+      "https://www.facebook.com/mhcollections",
+      "https://www.instagram.com/mhcollections",
+      "https://twitter.com/mhcollections"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "",
+      "contactType": "Customer Service",
+      "areaServed": "PK",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-  <div class="container justify-content-center">
-    <a class="navbar-brand" href="#">
-      <img src="images/logo.png" alt="Logo" id="logo">
+<nav class="navbar-custom">
+  <div class="container navbar-container">
+    <a href="#" class="navbar-brand">
+      <img src="images/logo.webp" alt="Logo" id="logo">
     </a>
+
+    <button class="menu-toggle" id="menuToggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#new-arrival">New Arrival</a></li>
+      <li><a href="#Sale">Sale</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+    </ul>
   </div>
 </nav>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -37,7 +106,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// Wrap each character of the h1 in a span and preserve spaces
 const heading = document.getElementById('animated-heading');
 const text = heading.textContent;
 heading.textContent = '';
@@ -49,14 +117,12 @@ text.split('').forEach((char, i) => {
     heading.appendChild(span);
 });
 </script>
-
 <!-- Categories Section -->
  <section class="py-5 bg-white">
   <div class="container text-center">
     <h2 id="category-heading">Our Collections</h2>
 
     <div class="row g-4 ">
-
       <!-- Winter Collection -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="category-box">
@@ -66,7 +132,6 @@ text.split('').forEach((char, i) => {
           <h5>Winter Collection</h5>
         </div>
       </div>
-
       <!-- Summer Collection -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="category-box">
@@ -76,7 +141,6 @@ text.split('').forEach((char, i) => {
           <h5>Summer Collection</h5>
         </div>
       </div>
-
       <!-- Jackets -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="category-box">
@@ -86,7 +150,6 @@ text.split('').forEach((char, i) => {
           <h5>Jackets</h5>
         </div>
       </div>
-
       <!-- Men's Accessories -->
       <div class="col-12 col-md-6 col-lg-3">
         <div class="category-box">
@@ -101,7 +164,7 @@ text.split('').forEach((char, i) => {
   </div>
 </section>
 
-<!-- ===================== Modern 4-Image Row Collage ===================== -->
+<!-- 4 Image Collage Section -->
 <section id="modern-collage-row" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-5" id="modern-collage-row-heading">Our Featured Collection</h2>
@@ -131,10 +194,10 @@ text.split('').forEach((char, i) => {
   </div>
 </section>
 
-<!-- ===================== On Sale Section ===================== -->
-<section class="bg-light" style="padding-bottom: 20px;">
+<!-- On Sale Section -->
+<section class="bg-light" style="padding-bottom: 20px;" id="Sale">
   <div class="container">
-        <h2 class="text-center mb-5" id="product-heading-main">Exclusive Offers</h2>
+    <h2 class="text-center mb-5" id="product-heading-main">Exclusive Offers</h2>
 
     <div class="row g-4" id="saleProductContainer">
       <!-- Sale products will be dynamically added here -->
@@ -142,7 +205,7 @@ text.split('').forEach((char, i) => {
   </div>
 </section>
 
-<!-- ===================== Modal Popup ===================== -->
+<!-- Modal Popup -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -162,20 +225,33 @@ text.split('').forEach((char, i) => {
           <h5 id="modalPrice" class="mb-3"></h5>
         </div>
 
-        <button class="btn btn-lg" id="buyNowBtn">Buy Now</button>
+        <button class="btn btn-lg" id="buyNowBtn">Order Now</button>
       </div>
     </div>
   </div>
 </div>
 
 <style>
-/* Sale Badge & Modal Styles */
-.modal-content { border-radius:15px; border:1.5px solid rgba(10,31,68,0.25); box-shadow:0 8px 30px rgba(10,31,68,0.25); background:#fff;}
-.modal-header { background:#0a1f44; color:#fff; border-top-left-radius:15px; border-top-right-radius:15px; padding:1rem 1.5rem; }
+.modal-content {
+  border-radius:15px; 
+  border:1.5px solid rgba(10,31,68,0.25);
+  box-shadow:0 8px 30px rgba(10,31,68,0.25);
+  background:#fff;
+}
+.modal-header {
+  background:#0a1f44; color:#fff;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+  padding:1rem 1.5rem;
+}
 .modal-title { font-family:'Poppins',sans-serif; font-weight:600; letter-spacing:0.5px;}
 .btn-close { filter:invert(1); opacity:0.9;}
 .modal-body { padding:30px; color:#0a1f44;}
-#modalImg { max-width:100%; max-height:420px; object-fit:contain; border-radius:12px; border:2px solid rgba(212,175,55,0.25); transition:transform 0.3s ease;}
+#modalImg {
+  max-width:100%; max-height:420px; object-fit:contain;
+  border-radius:12px; border:2px solid rgba(212,175,55,0.25);
+  transition:transform 0.3s ease;
+}
 #modalImg:hover { transform:scale(1.02);}
 .modal-detail { text-align:left; margin-top:25px;}
 .modal-detail p { font-size:1rem; color:#333; margin:10px 0; line-height:1.6; }
@@ -192,45 +268,34 @@ text.split('').forEach((char, i) => {
 </style>
 
 <script>
-// Sale product names manually
-const saleProductNames = [
-  "Classic Leather Jacket",
-  "Bomber Leather Jacket",
-  "Hooded Casual Jacket",
-  "Winter Parka Jacket",
-  "Premium Leather Jacket",
-  "Black Hooded Bomber",
-  "Classic Brown Jacket",
-  "Stylish Grey Jacket"
-];
+const saleProductIDs = ["P001", "P003", "P004", "P005", "P006", "P008", "P009", "P010"];
 
-// Load products
 async function loadProducts() {
   let products = [];
   try {
     const res = await fetch('products.json');
-    const jsonProducts = await res.json();
-    products = jsonProducts;
+    products = await res.json();
   } catch (err) {
     console.error("Error loading products.json:", err);
   }
-  const savedProducts = localStorage.getItem('products');
-  if (savedProducts) {
-    const localProducts = JSON.parse(savedProducts);
+
+  const localData = localStorage.getItem('products');
+  if (localData) {
+    const localProducts = JSON.parse(localData);
     products = [...products, ...localProducts];
   }
+
   return products;
 }
 
-// Render Sale Products
 async function renderSaleProducts() {
   const container = document.getElementById('saleProductContainer');
   container.innerHTML = '';
-  let products = await loadProducts();
-  const saleProducts = products.filter(p => saleProductNames.includes(p.name)).slice(0,8);
+  const products = await loadProducts();
+  const saleProducts = products.filter(p => saleProductIDs.includes(p.id)).slice(0, 8);
 
   saleProducts.forEach(product => {
-    const originalPrice = parseFloat(product.price.toString().replace(/,/g,'')) || 0;
+    const originalPrice = parseFloat(product.price.toString().replace(/,/g, '')) || 0;
     const discountedPrice = (originalPrice * 0.9).toFixed(0);
 
     const col = document.createElement('div');
@@ -260,9 +325,9 @@ async function renderSaleProducts() {
   bindProductModal();
 }
 
-// Bind Modal Events
 function bindProductModal() {
-  const modal = new bootstrap.Modal(document.getElementById('productModal'));
+  const modalElement = document.getElementById('productModal');
+  const modal = new bootstrap.Modal(modalElement);
   const modalTitle = document.getElementById('modalTitle');
   const modalImg = document.getElementById('modalImg');
   const modalDesc = document.getElementById('modalDesc');
@@ -314,30 +379,27 @@ function bindProductModal() {
     });
   });
 
+  modalElement.addEventListener('hidden.bs.modal', () => {
+    document.body.classList.remove('modal-open');
+    const backdrops = document.querySelectorAll('.modal-backdrop');
+    backdrops.forEach(b => b.remove());
+  });
+
   buyNowBtn.addEventListener('click', () => {
     const phone = '+923402444076';
-    let message = `Hello, I'm interested in this product:\n`;
-    message += `Name: ${selectedProduct.name}\n`;
-    message += `Price: ${selectedProduct.price}\n`;
-    message += `Color: ${selectedColor || 'Not selected'}\n`;
-    message += `Image: ${selectedProduct.img}`;
-
-    const encodedMessage = encodeURIComponent(message);
+    const message = encodeURIComponent(`Hello, I'm interested in this product:\nName: ${selectedProduct.name}\nPrice: ${selectedProduct.price}\nColor: ${selectedColor || 'Not selected'}\nImage: ${selectedProduct.img}`);
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const whatsappURL = isMobile 
-      ? `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}` 
-      : `https://web.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
-
-    window.open(whatsappURL, '_blank');
+    const url = isMobile
+      ? `https://api.whatsapp.com/send?phone=${phone}&text=${message}`
+      : `https://web.whatsapp.com/send?phone=${phone}&text=${message}`;
+    window.open(url, '_blank');
   });
 }
-
-// Initial Render
 renderSaleProducts();
 </script>
 
 
-<!-- ===================== Image Collage Section ===================== -->
+<!-- Image Collage Section -->
 <section class="image-collage-section py-5 bg-light">
   <div class="container">
         <h2 class="text-center mb-5" id="product-heading-main">Explore Our Collection</h2>
@@ -359,7 +421,7 @@ renderSaleProducts();
 
 
 <!-- NEw Arrival Section -->
-<section class="bg-light" style="padding-bottom: 20px;">
+<section class="bg-light" style="padding-bottom: 20px;" id="new-arrival">
   <div class="container">
     <h2 class="text-center mb-5" id="product-heading-main">New Arrivals</h2>
     <div class="row g-4" id="productContainer">
@@ -368,7 +430,6 @@ renderSaleProducts();
   </div>
 </section>
 
-<!-- Modal Popup -->
 <style>
 .modal-content {
   border-radius: 15px;
@@ -459,6 +520,7 @@ renderSaleProducts();
   border: 2px solid #d4af37;
   box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
+
 #modalPrice {
   color: #d4af37;
   font-weight: 700;
@@ -483,16 +545,12 @@ renderSaleProducts();
 }
 
 @media (max-width: 768px) {
-  .modal-detail {
-    text-align: center;
-  }
-  #modalImg {
-    max-height: 300px;
-  }
+  .modal-detail { text-align: center; }
+  #modalImg { max-height: 300px; }
 }
 </style>
 
-<!-- 🔹 MODAL -->
+<!-- MODAL -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -500,10 +558,8 @@ renderSaleProducts();
         <h5 class="modal-title" id="modalTitle"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-
       <div class="modal-body text-center">
         <img id="modalImg" src="" class="img-fluid mb-3" alt="Product Image">
-
         <div class="modal-detail">
           <p><strong>Category:</strong> <span id="modalCategory"></span></p>
           <p><strong>Description:</strong> <span id="modalDesc"></span></p>
@@ -511,33 +567,20 @@ renderSaleProducts();
           <div id="colorContainer" class="color-options"></div>
           <h5 id="modalPrice" class="mb-3"></h5>
         </div>
-
-        <button class="btn btn-lg"  id="buyNowBtn">Buy Now</button>
+        <button class="btn btn-lg" id="buyNowBtn">Order Now</button>
       </div>
     </div>
   </div>
 </div>
 <script>
-// 🔹 Manual product names for display
-const featuredProductNames = [
-  "Classic Leather Jacket",
-  "Bomber Leather Jacket",
-  "Hooded Casual Jacket",
-  "Winter Parka Jacket",
-  "Premium Leather Jacket",
-  "Black Hooded Bomber",
-  "Classic Brown Jacket",
-  "Stylish Grey Jacket"
-];
+const newArrival_featuredIds = ["P011", "P010", "P009", "P005", "P012", "P003", "P002", "P001"];
 
-// 🔹 Fetch and merge products
-async function loadProducts() {
-  let products = [];
-
+async function newArrival_loadProducts() {
+  let newArrival_products = [];
   try {
     const res = await fetch('products.json');
     const jsonProducts = await res.json();
-    products = jsonProducts;
+    newArrival_products = jsonProducts;
   } catch (err) {
     console.error("Error loading products.json:", err);
   }
@@ -545,57 +588,91 @@ async function loadProducts() {
   const savedProducts = localStorage.getItem('products');
   if (savedProducts) {
     const localProducts = JSON.parse(savedProducts);
-    products = [...products, ...localProducts];
+    newArrival_products = [...newArrival_products, ...localProducts];
   }
 
-  return products;
+  return newArrival_products;
 }
+async function newArrival_renderCards() {
+  const newArrival_container = document.getElementById('productContainer');
+  newArrival_container.innerHTML = '';
 
-// 🔹 Render product cards (only featured)
-async function renderProductCards() {
-  const container = document.getElementById('productContainer');
-  container.innerHTML = '';
+  const newArrival_products = await newArrival_loadProducts();
+  const newArrival_featuredProducts = newArrival_products.filter(p => newArrival_featuredIds.includes(p.id));
 
-  let products = await loadProducts();
-
-  // Filter only featured products
-  const featuredProducts = products.filter(p => featuredProductNames.includes(p.name));
-
-  featuredProducts.forEach(product => {
-    const col = document.createElement('div');
-    col.className = 'col-12 col-md-6 col-lg-3';
-    col.innerHTML = `
+  newArrival_featuredProducts.forEach(product => {
+    const newArrival_col = document.createElement('div');
+    newArrival_col.className = 'col-12 col-md-6 col-lg-3';
+    newArrival_col.innerHTML = `
       <div class="product-card shadow-sm h-100 text-center overflow-hidden position-relative border rounded">
         <div class="img-wrapper overflow-hidden">
-          <img src="${product.image}" alt="${product.name}" class="product-img rounded" style="width:100%; height:250px; object-fit:cover;">
+          <img src="${product.image}" alt="${product.name}" 
+          class="product-img rounded" 
+          style="width:100%; height:250px; object-fit:cover;">
         </div>
         <div class="p-3">
           <h5 class="fw-bold mb-2">${product.name}</h5>
           <p class="text-muted mb-1">PKR ${product.price}</p>
           <button class="btn btn-dark btn-sm see-details-btn mt-2"
-            data-name="${product.name}" 
-            data-price="PKR ${product.price}" 
-            data-img="${product.image}" 
-            data-desc="${product.desc}"
-            data-colors='${(product.color || []).join(",")}' 
-            data-category="${product.category || 'General'}">See Details</button>
+            data-id="${product.id}">
+            See Details
+          </button>
         </div>
       </div>
     `;
-    container.appendChild(col);
+    newArrival_container.appendChild(newArrival_col);
   });
 
-  bindProductModal(); // modal binding (reuse same function)
+  newArrival_bindModal(newArrival_products);
+}
+function newArrival_bindModal(newArrival_products) {
+  const newArrival_buttons = document.querySelectorAll('.see-details-btn');
+  newArrival_buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const newArrival_productId = btn.dataset.id;
+      const newArrival_product = newArrival_products.find(p => p.id === newArrival_productId);
+      if (newArrival_product) newArrival_showModal(newArrival_product);
+    });
+  });
 }
 
-// 🔹 Initial render
-renderProductCards();
+function newArrival_showModal(product) {
+  const newArrival_modalTitle = document.getElementById('modalTitle');
+  const newArrival_modalImg = document.getElementById('modalImg');
+  const newArrival_modalDesc = document.getElementById('modalDesc');
+  const newArrival_modalCategory = document.getElementById('modalCategory');
+  const newArrival_modalPrice = document.getElementById('modalPrice');
+  const newArrival_colorContainer = document.getElementById('colorContainer');
+
+  newArrival_modalTitle.textContent = product.name;
+  newArrival_modalImg.src = product.image;
+  newArrival_modalDesc.textContent = product.desc;
+  newArrival_modalCategory.textContent = product.category || 'General';
+  newArrival_modalPrice.textContent = `PKR ${product.price}`;
+  newArrival_colorContainer.innerHTML = '';
+
+  (product.color || []).forEach(color => {
+    const div = document.createElement('div');
+    div.className = 'color-circle';
+    div.style.backgroundColor = color.toLowerCase();
+    newArrival_colorContainer.appendChild(div);
+  });
+
+  const newArrival_modalElement = document.getElementById('productModal');
+  const newArrival_modal = new bootstrap.Modal(newArrival_modalElement, {
+    backdrop: true,
+    keyboard: true
+  });
+  newArrival_modal.show();
+
+  newArrival_modalElement.addEventListener('hidden.bs.modal', () => {
+    document.body.classList.remove('modal-open');
+    const newArrival_backdrop = document.querySelector('.modal-backdrop');
+    if (newArrival_backdrop) newArrival_backdrop.remove();
+  });
+}
+newArrival_renderCards();
 </script>
-
-
-
-
-
 
 <!-- Why Choose Us Section -->
 <section class="py-5 bg-light">
@@ -652,7 +729,6 @@ renderProductCards();
 </section>
 
 <script>
-// Scroll animation
 const cards = document.querySelectorAll('.animate-card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -665,7 +741,6 @@ cards.forEach(card => observer.observe(card));
 </script>
 
 <!-- Testimonial -->
- <!-- Testimonial Section -->
 <section class="py-5" id="testimonials">
   <div class="container">
     <h2 id="Why-choose-us-heading">What Our Customers Are Saying</h2>
@@ -722,8 +797,6 @@ cards.forEach(card => observer.observe(card));
   <h5 class="fw-bold text-light mb-1">Danish Malik</h5>
   <small class="text-muted">Peshawar</small>
 </div>
-
-
       </div>
 
       <!-- Controls -->
@@ -742,47 +815,49 @@ cards.forEach(card => observer.observe(card));
 
 
 <!-- Footer -->
-<!-- Footer -->
-<footer class="bg-dark text-light pt-5 pb-4" style="background-color:#0a1f44 !important;">
+<footer class="footer-section text-light pt-5 pb-4">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-start gy-4">
 
-      <!-- Logo & Social Icons -->
-      <div class="col-12 col-md-4 mb-4 text-center text-md-start">
-        <a href="#" class="d-block mb-3">
-          <img src="images/logo.png" alt="Logo" style="height: 70px;">
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <a href="#" class="d-inline-block mb-3">
+          <img src="images/logo.webp" alt="MH Collections Logo" style="height: 120px;">
         </a>
-        <div class="d-flex justify-content-center justify-content-md-start gap-3 mb-3">
-          <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-pinterest-p"></i></a>
+        <p class="text-muted small mb-4" style="color:#cfcfcf !important;">
+          Redefining modern elegance with refined jackets & apparel for timeless style.
+        </p>
+        <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
         </div>
-        <p class="text-center text-md-start" style="color:#d4af37;">&copy; 2025 Weaves and Wears. All Rights Reserved.</p>
       </div>
 
-      <!-- Quick Links -->
-      <div class="col-12 col-md-2 mb-4">
-        <h5 class="fw-bold mb-3" style="color:#d4af37;">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-light text-decoration-none" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a></li>
-          <li><a href="#" class="text-light text-decoration-none" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
-          <li><a href="#" class="text-light text-decoration-none" data-bs-toggle="modal" data-bs-target="#refundModal">Refund Policy</a></li>
-          <li><a href="#" class="text-light text-decoration-none" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a></li>
+      <div class="col-12 col-md-3 text-center text-md-start">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#refundModal">Refund Policy</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a></li>
         </ul>
       </div>
 
-      <!-- Newsletter -->
-      <div class="col-12 col-md-6 mb-4">
-        <h5 class="fw-bold mb-3" style="color:#d4af37;">Newsletter</h5>
-        <p style="color:#fff;">Subscribe to get our latest updates and offers.</p>
-        <form id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2">
-          <input type="email" class="form-control" placeholder="Your email" required
-                 style="background-color:#0a1f44; color:#fff; border:1px solid #fff;">
-          <button type="submit" class="btn" style="background-color:#d4af37; color:#0a1f44; border:none;">Subscribe</button>
-        </form>
+      <div class="col-12 col-md-5 text-center text-md-start">
+        <h5 class="footer-title">Get In Touch</h5>
+        <ul class="footer-contact list-unstyled">
+          <li><i class="fas fa-map-marker-alt"></i> Shop #12, First Floor, City Center Mall, Karachi, Pakistan</li>
+          <li><i class="fas fa-phone-alt"></i> +92 312 3456789</li>
+          <li><i class="fas fa-envelope"></i> info@mhcollections.com</li>
+        </ul>
       </div>
 
+    </div>
+
+    <hr class="mt-5 mb-3" style="border-color:#444;">
+    <div class="text-center small" style="color:#bdbdbd;">
+      © 2025 <span style="color:#d4af37;">MH Collections</span>. All Rights Reserved.
     </div>
   </div>
 </footer>
@@ -795,7 +870,6 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 });
 </script>
 
-<!-- Modals -->
 <!-- Terms & Conditions Modal -->
 <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg">
@@ -805,30 +879,30 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-  <p>Welcome to Weaves & Wears. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. All users must read these terms carefully before making any purchase or using our services. Weaves & Wears reserves the right to update, modify, or revise these terms at any time without prior notice, and continued use of the website constitutes acceptance of such changes.</p>
+        <p>Welcome to MH Collections. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. All users must read these terms carefully before making any purchase or using our services. MH Collections reserves the right to update, modify, or revise these terms at any time without prior notice, and continued use of the website constitutes acceptance of such changes.</p>
 
-  <p>All products listed on our website are subject to availability. Prices, product descriptions, and images are for reference only and may change without notice. We strive to ensure accuracy, but Weaves & Wears does not guarantee that all information is error-free. We reserve the right to refuse or cancel any order at our discretion, including orders that contain pricing errors or unauthorized promotions.</p>
+        <p>All products listed on our website are subject to availability. Prices, product descriptions, and images are for reference only and may change without notice. We strive to ensure accuracy, but MH Collections does not guarantee that all information is error-free. We reserve the right to refuse or cancel any order at our discretion, including orders that contain pricing errors or unauthorized promotions.</p>
 
-  <p>Users must be at least 18 years old to place an order. By providing personal information, you confirm that it is accurate and complete. All information shared with Weaves & Wears is governed by our Privacy Policy, and users consent to the collection, use, and storage of their data as outlined therein.</p>
+        <p>Users must be at least 18 years old to place an order. By providing personal information, you confirm that it is accurate and complete. All information shared with MH Collections is governed by our Privacy Policy, and users consent to the collection, use, and storage of their data as outlined therein.</p>
 
-  <p>Payments must be made through the accepted payment methods listed on our website. Weaves & Wears ensures secure transactions, but we are not liable for any issues arising from payment gateways or banking processes. All purchases are subject to applicable taxes, shipping charges, and delivery terms, which are clearly indicated at checkout.</p>
+        <p>Payments must be made through the accepted payment methods listed on our website. MH Collections ensures secure transactions, but we are not liable for any issues arising from payment gateways or banking processes. All purchases are subject to applicable taxes, shipping charges, and delivery terms, which are clearly indicated at checkout.</p>
 
-  <p>Weaves & Wears strives to deliver all orders in a timely manner. However, delivery dates are estimates and may be affected by external factors beyond our control, including courier delays, natural disasters, or supply shortages. Users are responsible for providing accurate shipping information. Weaves & Wears is not liable for lost or delayed shipments due to incorrect or incomplete information provided by the user.</p>
+        <p>MH Collections strives to deliver all orders in a timely manner. However, delivery dates are estimates and may be affected by external factors beyond our control, including courier delays, natural disasters, or supply shortages. Users are responsible for providing accurate shipping information. MH Collections is not liable for lost or delayed shipments due to incorrect or incomplete information provided by the user.</p>
 
-  <p>All returns, exchanges, and refunds are handled according to our Return & Refund Policy. Users must review and comply with these policies before initiating any request. Weaves & Wears reserves the right to refuse returns that do not meet the stated conditions.</p>
+        <p>All returns, exchanges, and refunds are handled according to our Return & Refund Policy. Users must review and comply with these policies before initiating any request. MH Collections reserves the right to refuse returns that do not meet the stated conditions.</p>
 
-  <p>Users are prohibited from using Weaves & Wears for unlawful purposes, including but not limited to violating intellectual property rights, distributing harmful content, or attempting unauthorized access to our systems. Any violation may result in immediate suspension or termination of access, as well as legal action if necessary.</p>
+        <p>Users are prohibited from using MH Collections for unlawful purposes, including but not limited to violating intellectual property rights, distributing harmful content, or attempting unauthorized access to our systems. Any violation may result in immediate suspension or termination of access, as well as legal action if necessary.</p>
 
-  <p>Weaves & Wears disclaims any liability for direct, indirect, or consequential damages arising from the use of our website or products. Our website and products are provided "as is" without warranties of any kind, either express or implied, including merchantability or fitness for a particular purpose.</p>
+        <p>MH Collections disclaims any liability for direct, indirect, or consequential damages arising from the use of our website or products. Our website and products are provided "as is" without warranties of any kind, either express or implied, including merchantability or fitness for a particular purpose.</p>
 
-  <p>By using Weaves & Wears, you agree to resolve any disputes through good-faith negotiations. If a resolution cannot be reached, disputes shall be governed by the laws of Pakistan and subject to the jurisdiction of relevant courts in Karachi.</p>
+        <p>By using MH Collections, you agree to resolve any disputes through good-faith negotiations. If a resolution cannot be reached, disputes shall be governed by the laws of Pakistan and subject to the jurisdiction of relevant courts in Karachi.</p>
 
-  <p>Thank you for choosing Weaves & Wears. By shopping with us, you accept these terms and conditions and acknowledge your understanding of your rights and responsibilities as a valued customer.</p>
-</div>
-
+        <p>Thank you for choosing MH Collections. By shopping with us, you accept these terms and conditions and acknowledge your understanding of your rights and responsibilities as a valued customer.</p>
+      </div>
     </div>
   </div>
 </div>
+
 
 <!-- Privacy Policy Modal -->
 <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
@@ -839,28 +913,28 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-  <p>At Weaves & Wears, your privacy is extremely important to us. This Privacy Policy explains how we collect, store, and use the personal information you provide when visiting or making purchases on our website. By using our services, you agree to the practices described below.</p>
+        <p>At MH Collections, your privacy is extremely important to us. This Privacy Policy explains how we collect, store, and use the personal information you provide when visiting or making purchases on our website. By using our services, you agree to the practices described below.</p>
 
-  <p>We collect personal information such as your name, email address, phone number, shipping and billing addresses, and payment details when you place an order or register an account. This information is used solely to process orders, provide customer support, and improve your shopping experience.</p>
+        <p>We collect personal information such as your name, email address, phone number, shipping and billing addresses, and payment details when you place an order or register an account. This information is used solely to process orders, provide customer support, and improve your shopping experience.</p>
 
-  <p>Weaves & Wears also collects non-personal information automatically through cookies, web beacons, and analytics tools. This includes data such as your IP address, browser type, device information, pages visited, and duration of visits. This information helps us analyze website performance, understand user behavior, and enhance our services.</p>
+        <p>MH Collections also collects non-personal information automatically through cookies, web beacons, and analytics tools. This includes data such as your IP address, browser type, device information, pages visited, and duration of visits. This information helps us analyze website performance, understand user behavior, and enhance our services.</p>
 
-  <p>We may use third-party services, including payment processors, shipping partners, and analytics providers, who may have access to your information solely for the purpose of performing their functions. We ensure that these third-party services comply with applicable privacy standards and protect your data.</p>
+        <p>We may use third-party services, including payment processors, shipping partners, and analytics providers, who may have access to your information solely for the purpose of performing their functions. We ensure that these third-party services comply with applicable privacy standards and protect your data.</p>
 
-  <p>We take appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Sensitive data such as payment information is securely transmitted and encrypted.</p>
+        <p>We take appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Sensitive data such as payment information is securely transmitted and encrypted.</p>
 
-  <p>We do not sell, trade, or rent your personal information to third parties for marketing purposes. Your information may be shared only as required to complete transactions, comply with legal obligations, or prevent fraudulent activities.</p>
+        <p>We do not sell, trade, or rent your personal information to third parties for marketing purposes. Your information may be shared only as required to complete transactions, comply with legal obligations, or prevent fraudulent activities.</p>
 
-  <p>You have the right to access, update, or delete your personal information by contacting our customer support. You can also manage cookie preferences through your browser settings. However, please note that some features of the website may not function properly if cookies are disabled.</p>
+        <p>You have the right to access, update, or delete your personal information by contacting our customer support. You can also manage cookie preferences through your browser settings. However, please note that some features of the website may not function properly if cookies are disabled.</p>
 
-  <p>By using Weaves & Wears, you consent to the collection and use of your information as described in this Privacy Policy. We may update this policy from time to time, and any changes will be posted on our website with the updated effective date.</p>
+        <p>By using MH Collections, you consent to the collection and use of your information as described in this Privacy Policy. We may update this policy from time to time, and any changes will be posted on our website with the updated effective date.</p>
 
-  <p>Thank you for trusting Weaves & Wears with your information. Your privacy and security remain our top priority, and we are committed to maintaining your confidence in our services.</p>
-</div>
-
+        <p>Thank you for trusting MH Collections with your information. Your privacy and security remain our top priority, and we are committed to maintaining your confidence in our services.</p>
+      </div>
     </div>
   </div>
 </div>
+
 
 <!-- Refund Policy Modal -->
 <div class="modal fade" id="refundModal" tabindex="-1" aria-hidden="true">
@@ -871,19 +945,18 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-  <p>At Weaves & Wears, customer satisfaction is our top priority. Our Refund Policy outlines the process for returns, exchanges, and refunds to ensure a smooth and transparent experience for our valued customers.</p>
+        <p>At MH Collections, customer satisfaction is our top priority. Our Refund Policy outlines the process for returns, exchanges, and refunds to ensure a smooth and transparent experience for our valued customers.</p>
 
-  <p>If you are not completely satisfied with your purchase, you may request a return or exchange within 7 days of receiving your order. To be eligible, items must be unused, in original condition, and include all tags and packaging. Personalized or custom-made items are non-refundable unless damaged or defective.</p>
+        <p>If you are not completely satisfied with your purchase, you may request a return or exchange within 7 days of receiving your order. To be eligible, items must be unused, in original condition, and include all tags and packaging. Personalized or custom-made items are non-refundable unless damaged or defective.</p>
 
-  <p>To initiate a return or exchange, please contact our customer support team with your order number and details of the item. We will provide instructions on how to return the product. Customers are responsible for shipping costs on returns, except in cases of defective or incorrect items.</p>
+        <p>To initiate a return or exchange, please contact our customer support team with your order number and details of the item. We will provide instructions on how to return the product. Customers are responsible for shipping costs on returns, except in cases of defective or incorrect items.</p>
 
-  <p>Once we receive and inspect the returned item, we will notify you regarding the approval or rejection of your refund. Approved refunds will be processed within 7–10 business days using the original payment method. In the case of exchanges, we will ship the replacement item as soon as possible at no additional cost.</p>
+        <p>Once we receive and inspect the returned item, we will notify you regarding the approval or rejection of your refund. Approved refunds will be processed within 7–10 business days using the original payment method. In the case of exchanges, we will ship the replacement item as soon as possible at no additional cost.</p>
 
-  <p>Weaves & Wears reserves the right to refuse a refund or exchange if the returned item does not meet the stated conditions. Items damaged due to misuse, negligence, or improper handling are not eligible for refund or exchange.</p>
+        <p>MH Collections reserves the right to refuse a refund or exchange if the returned item does not meet the stated conditions. Items damaged due to misuse, negligence, or improper handling are not eligible for refund or exchange.</p>
 
-  <p>For any questions regarding our Refund Policy or to initiate a return, please contact our customer support team. We are committed to providing a hassle-free experience and ensuring your satisfaction with every purchase.</p>
-</div>
-
+        <p>For any questions regarding our Refund Policy or to initiate a return, please contact our customer support team. We are committed to providing a hassle-free experience and ensuring your satisfaction with every purchase.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -897,77 +970,28 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-  <p>The information provided on the Weaves & Wears website is for general informational purposes only. While we strive to ensure that all content, product descriptions, images, and pricing are accurate and up-to-date, we make no guarantees regarding the completeness, reliability, or accuracy of any information on the site.</p>
+        <p>The information provided on the MH Collections website is for general informational purposes only. While we strive to ensure that all content, product descriptions, images, and pricing are accurate and up-to-date, we make no guarantees regarding the completeness, reliability, or accuracy of any information on the site.</p>
 
-  <p>Weaves & Wears is not liable for any errors, omissions, or inaccuracies in the content provided. All products, promotions, and offers are subject to change without prior notice. We reserve the right to modify or discontinue any product, service, or feature at any time without liability.</p>
+        <p>MH Collections is not liable for any errors, omissions, or inaccuracies in the content provided. All products, promotions, and offers are subject to change without prior notice. We reserve the right to modify or discontinue any product, service, or feature at any time without liability.</p>
 
-  <p>By using our website, you acknowledge that any reliance on the information provided is at your own risk. Weaves & Wears is not responsible for any direct, indirect, or consequential damages arising from the use of our website, products, or services, including but not limited to financial loss, business interruption, or personal injury.</p>
+        <p>By using our website, you acknowledge that any reliance on the information provided is at your own risk. MH Collections is not responsible for any direct, indirect, or consequential damages arising from the use of our website, products, or services, including but not limited to financial loss, business interruption, or personal injury.</p>
 
-  <p>Links to third-party websites are provided solely for convenience and do not constitute an endorsement or warranty of any kind. Weaves & Wears has no control over third-party content and is not responsible for the accuracy, legality, or safety of these external sites.</p>
+        <p>Links to third-party websites are provided solely for convenience and do not constitute an endorsement or warranty of any kind. MH Collections has no control over third-party content and is not responsible for the accuracy, legality, or safety of these external sites.</p>
 
-  <p>Users are responsible for ensuring that any products purchased meet their individual needs and comply with local laws and regulations. Weaves & Wears does not provide medical, legal, or professional advice, and any reliance on such information is strictly at your own discretion.</p>
+        <p>Users are responsible for ensuring that any products purchased meet their individual needs and comply with local laws and regulations. MH Collections does not provide medical, legal, or professional advice, and any reliance on such information is strictly at your own discretion.</p>
 
-  <p>By accessing or using Weaves & Wears, you agree to this disclaimer and understand that the website and its content are provided “as is” without warranties of any kind, either express or implied. Weaves & Wears reserves the right to update this disclaimer at any time, and continued use of the site constitutes acceptance of any changes.</p>
-</div>
-
+        <p>By accessing or using MH Collections, you agree to this disclaimer and understand that the website and its content are provided “as is” without warranties of any kind, either express or implied. MH Collections reserves the right to update this disclaimer at any time, and continued use of the site constitutes acceptance of any changes.</p>
+      </div>
     </div>
   </div>
 </div>
 
-
-<!-- Floating Admin Button -->
-<!-- <button id="adminBtn" 
-        style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; 
-               background-color: #16c9bd; color: #fff; border: none; 
-               border-radius: 50%; width: 60px; height: 60px; font-size: 24px; 
-               box-shadow: 0 5px 15px rgba(0,0,0,0.3); cursor: pointer;">
-  <i class="fas fa-user-shield"></i>
-</button>
-
-<div class="modal fade" id="adminLoginModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-4">
-      <h4 class="text-center mb-3">Only for Admin Use</h4>
-      <form id="adminLoginForm">
-        <div class="mb-3">
-          <label for="adminEmail" class="form-label">Email</label>
-          <input type="text" class="form-control" id="adminEmail" placeholder="Email" required>
-        </div>
-        <div class="mb-3">
-          <label for="adminPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="adminPassword" placeholder="Password" required>
-        </div>
-        <button type="submit" class="btn btn-primary w-100" style="background-color:#16c9bd; border:none;">Login</button>
-      </form>
-    </div>
-  </div>
+<div class="whatsapp-floating-image">
+  <a href="#">
+    <img src="images/whatsapp.webp" alt="">
+  </a>
 </div>
-
-
-<script>
-  const adminModal = new bootstrap.Modal(document.getElementById('adminLoginModal'));
-
-  document.getElementById('adminBtn').addEventListener('click', () => {
-    adminModal.show();
-  });
-
-  document.getElementById('adminLoginForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const email = document.getElementById('adminEmail').value;
-    const password = document.getElementById('adminPassword').value;
-
-    if(email === 'admin' && password === 'admin'){
-      window.location.href = 'dashboard.html';
-    } else {
-      alert('Invalid credentials! Email: admin, Password: admin');
-    }
-  });
-</script> -->
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
